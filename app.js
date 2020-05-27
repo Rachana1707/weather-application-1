@@ -1,11 +1,11 @@
-var date=new Date()
-var daysInWeek=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
-var day=date.getDay()
-var today=daysInWeek[day]
-var hours=date.getHours()
-var minutes=date.getMinutes()
+var date=new Date();
+var daysInWeek=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+var day=date.getDay();
+var today=daysInWeek[day];
+var hours=date.getHours();
+var minutes=date.getMinutes();
 
-document.getElementById("dateAndTime").innerText='${today} ${hours}:${minutes}';
+document.getElementById("dateAndTime").innerText ='${today} ${hours}:${minutes}';
 
 var weatherInCities=[
     {city:"Hyderabad,Telangana",climateCondition:"sunny",temperature:45,lattitude:17.385(north),longitude:78.4867(south)},
@@ -22,9 +22,9 @@ function getWeather(){
     })
     document.getElementById("climate").innerText=weatherInSelectedCity.climateCondition;
     document.getElementById("temp").innerText=weatherInSelectedCity.temperature;
-    document.getElementById("temp").innerText=weatherInSelectedCity.longitude;
-    document.getElementById("temp").innerText=weatherInSelectedCity.lattitude;
-        document.getElementById("city").innerText=selectedCityFromList;
+    document.getElementById("longitude").innerText=weatherInSelectedCity.longitude;
+    document.getElementById("lattitude").innerText=weatherInSelectedCity.lattitude;
+     document.getElementById("city").innerText=selectedCityFromList;
 }
 function getFahrenheit(){
     var list=document.getElementById("list");
