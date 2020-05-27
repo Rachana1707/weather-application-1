@@ -5,7 +5,7 @@
     top: 0;
 }
 .left{
-    background-color: rgb(20,148,247);
+    background-color: deeppink;
     text-align: center;
     left: 0;
 }
@@ -23,6 +23,7 @@
 }
 .border{
     border: 02px solid green;
+    background-color: darkorange;
     padding: 20px;
     margin-right:02%;
     margin-top:02%;
