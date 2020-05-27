@@ -45,7 +45,7 @@ function myfun() {
     }
 }
   function  getFahrenheit(){
-      
+
     var e = document.getElementById("list");
     var select = e.options[e.selectedIndex].value;
     document.getElementById("city").innerText = select;
@@ -66,5 +66,5 @@ function myfun() {
   }
 
 
-  }  
+   
     
