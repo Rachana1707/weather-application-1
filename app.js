@@ -1,44 +1,46 @@
-var date=new Date();
-var daysInWeek=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
-var day=date.getDay();
-var today=daysInWeek[day];
-var hours=date.getHours();
-var minutes=date.getMinutes();
+var date = new Date();
+var daysinweek = ["SUNDAY", "MONDAY", "TEUSDAY", "WEDNESDAY", "THRUSDAY", "FRIDAY", "SATUREDAY"];
+var day = date.getDay();
+var today = daysinweek[day]
+var hours = date.getHours();
+var times = hours % 12;
+var min = date.getMinutes();
+var sec = date.getSeconds();
+var ampm = hours < 12 ? "AM" : "PM";
+var timezone = "GMT+05:30(Indian Standard Time)";
+document.getElementById("dateandtime").innerText = today + '  ' + ' ' + times + ':' + min + ':' + sec + ampm + '  ' + '     ' + timezone;
+var citytemp = [34, 30, 28, 39, 29];
+function myfun() {
+    var e = document.getElementById("list");
+    var select = e.options[e.selectedIndex].value;
+    document.getElementById("city").innerText = select;
+    var citys = ["Hydrabad,Telangana", "Bhopal,MadhyaPradesh", "Impal,Manipur", "Agartala,Tripura", "Kohima,Nagaland"];
+    var val = citys.indexOf(select);
+    z=document.getElementById("te").innerText = citytemp[val]+" "+"C";
+    switch (val) {
+        case 0:
+            document.getElementById("clmde").innerText = "sunny";
+            z;
+            break;
+        case 1:
+            document.getElementById("clmde").innerText = "windy";
+            z;
+            break;
+        case 2:
+            document.getElementById("clmde").innerText = "cool";
+            z;
+            break;
+        case 3:
+            document.getElementById("clmde").innerText = "hot";
+            z;
+            break;
+        case 4:
+            document.getElementById("clmde").innerText = "rainy";
+            z;
+            break;
+        default:
+            document.getElementById("clmde").innerText = "select the city";
+            break;
 
-document.getElementById("dateAndTime").innerText ='${today} ${hours}:${minutes}';
-
-var weatherInCities=[
-    {city:"Hyderabad,Telangana",climateCondition:"sunny",temperature:45,lattitude:17.385(north),longitude:78.4867(south)},
-    {city:"Bhopal,MadhyaPradesh",climateCondition:"sunny",temperature:40,lattitude:19.285(north),longitude:76.4867(south)},
-    {city:"Imphal,Manipur",climateCondition:"cloudy",temperature:15,lattitude:12.385 (north),longitude:79.4867(south)},
-    {city:"Agarthala,Tripura",climateCondition:"Rainy",temperature:22,lattitude:15.385(north),longitude:80.4867(south)},
-    {city:"Kohima,Nagaland",climateCondition:"Humid",temperature:21,lattitude:9.385(north),longitude:75.4867(south)}
-]
-function getWeather(){
-    var list=document.getElementById("list")
-    var selectedCityFromList=list.options[list.selectedIndex].value;
-    var weatherInSelectedCity=weatherInCities.find(e=>{
-        return e.city==selectedCityFromList
-    })
-    document.getElementById("climate").innerText=weatherInSelectedCity.climateCondition;
-    document.getElementById("temp").innerText=weatherInSelectedCity.temperature;
-    document.getElementById("longitude").innerText=weatherInSelectedCity.longitude;
-    document.getElementById("lattitude").innerText=weatherInSelectedCity.lattitude;
-     document.getElementById("city").innerText=selectedCityFromList;
-}
-function getFahrenheit(){
-    var list=document.getElementById("list");
-    var selectedCityFromList=list.options[list.selectedIndex].value;
-    var weatherInSelectedCity=weatherInCities.find(e=>{
-        return e.city==selectedCityFromList
-})
-document.getElementById("temp").innerText=(weatherInSelectedCity.temperature*9/5)-32;
-}
-function getCelsius(){
-    var list=document.getElementById("list");
-    var selectedCityFromList=list.options[list.selectedIndex].value;
-    var weatherInSelectedCity=weatherInCities.find(e=>{
-        return e.city==selectedCityFromList
-})
-document.getElementById("temp").innerText=weatherInSelectedCity.temperature;
+    }
 }
