@@ -5,18 +5,26 @@
     top: 0;
 }
 .left{
-    left: 0;
-    background-color:brown;
+    background-color: rgb(20,148,247);
     text-align: center;
+    left: 0;
 }
 .right{
+    height: 100%;
+    width: 50%;
+    position: fixed;
     right: 0;
-    background-color: cyan;
-    text-align: left;
 }
 .centered{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+}
+.border{
+    border: 02px solid green;
+    padding: 20px;
+    margin-right:02%;
+    margin-top:02%;
+    margin-bottom:50%;
 }
