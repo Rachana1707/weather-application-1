@@ -16,11 +16,11 @@ function myfun() {
     document.getElementById("city").innerText = select;
     var citys = ["Hydrabad,Telangana", "Bhopal,MadhyaPradesh", "Impal,Manipur", "Agartala,Tripura", "Kohima,Nagaland"];
     var val = citys.indexOf(select);
-    z=document.getElementById("te").innerText = citytemp[val]+" "+"C";
+
     switch (val) {
         case 0:
             document.getElementById("clmde").innerText = "sunny";
-            z;
+            
             break;
         case 1:
             document.getElementById("clmde").innerText = "windy";
@@ -44,3 +44,27 @@ function myfun() {
 
     }
 }
+  function  getFahrenheit(){
+      
+    var e = document.getElementById("list");
+    var select = e.options[e.selectedIndex].value;
+    document.getElementById("city").innerText = select;
+    var citys = ["Hydrabad,Telangana", "Bhopal,MadhyaPradesh", "Impal,Manipur", "Agartala,Tripura", "Kohima,Nagaland"];
+    var val = citys.indexOf(select);
+
+      document.getElementById("te").innerText = (citytemp[val]*9/5)-32;
+  }
+  
+  function  getCelsius(){
+
+    var e = document.getElementById("list");
+    var select = e.options[e.selectedIndex].value;
+    document.getElementById("city").innerText = select;
+    var citys = ["Hydrabad,Telangana", "Bhopal,MadhyaPradesh", "Impal,Manipur", "Agartala,Tripura", "Kohima,Nagaland"];
+    var val = citys.indexOf(select);
+      document.getElementById("te").innerText=citytemp[value];
+  }
+
+
+  }  
+    
