@@ -12,7 +12,7 @@
             </div>
         </div>
         <div class="right part">
-                            <label for="list">Select Your City</Cite></Select></label></br>
+                            <label for="list">Select Your City>/label></br>
                 <select id="list">
                     <option value="Hydrabad,Telangana">Hydrabad,Telangana</option>
                     <option value="Bhopal,MadhyaPradesh">Bhopal,MadhyaPradesh</option>
@@ -21,13 +21,14 @@
                     <option value="Kohima,Nagaland">Kohima,Nagaland</option>
                 </select>
                 <input type="button" value="submit" onclick="myfun()">
-            <div id="rside" class="centered border">
+            <div id="rside" class=" border">
 
-                <h1 id="city" style="text-align:left">Please select the city</h1>
+                <h1 id="city">Please select the city</h1>
                 <p id="dateandtime">date</p>
                 <h1 id="clmde"></h1>
-                <h2 id="temp">temprature</h2>
-                <h1 id="te"></h1>
+                <h2 id="te"> temperature</h1>
+                <button class="cel" onclick="getCelsius()">&#8451</button>
+                <button class="fah" onclick="getFahrenheit()">&#8457</button>
             </div>
         </div>
         <script src="app.js"></script>
