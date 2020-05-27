@@ -6,11 +6,12 @@
 }
 .left{
     left: 0;
-    background-color: darkseagreen;
+    background-color:brown;
     text-align: center;
 }
 .right{
     right: 0;
+    background-color: cyan;
     text-align: left;
 }
 .centered{
